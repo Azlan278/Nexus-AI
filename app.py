@@ -6,6 +6,22 @@ app = Flask(__name__)
 
 def nexus_ai(message):
     text = message.lower().strip()
+    
+    if "eman ur rehman" in text or "eman ur rehman" in text:
+        import random
+
+        roasts = [
+            "Eman has entered the chat. Even the loading screen needs a break! 😂",
+            "NEXUS AI detected extra drama in the system. 😂",
+            "Warning: Eman mode activated. Sarcasm levels rising!",
+            "Eman doesn't need a spotlight. The drama brings its own lighting!",
+            "NEXUS AI recommends a coffee break for this much main-character energy! ☕",
+            "Plot twist: Eman is the reason the notification bell never rests!",
+            "Even the Wi-Fi needs a moment to process this much energy!"
+        ]
+
+        return random.choice(roasts)
+
 
     if any(x in text for x in ["hello", "hi", "salam"]):
         return "Welcome to NEXUS AI! How can I help?"
